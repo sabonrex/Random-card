@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Random Playing Card</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Michelle's Random Card Generator 1.0</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
   <body>
-    <script src="script.js"></script>
+    <div class="container">
+      <div id="theCard" class="card">
+        <span id="topSuit"></span>
+        <p id="randomNumber"></p>
+        <span id="bottomSuit"></span>
+      </div>
+      <button class="theButton" onclick="wholeCard()">New Card</button>
+    </div>
+    <script type="text/javascript" src="bundle.js"></script>
   </body>
 </html>

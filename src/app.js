@@ -2,63 +2,34 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+let suits, numbers, suitsBottom, i;
+let card = {
+  suits: ["&#9830", "&#9829", "&#9824", "&#9827"],
+  suitsBottom: ["&#9830", "&#9829", "&#9824", "&#9827"],
+  numbers: ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+};
 
-window.onload = function() {
-  function deckBuilder() {
-    const values = [
-      "A",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10",
-      "J",
-      "Q",
-      "K"
-    ];
-    const suits = ["Hearts", "Diamonds", "Spades", "Clubs"];
-    const cards = [];
-    for (let s = 0; s < suits.length; s++) {
-      for (let v = 0; v < values.length; v++) {
-        const value = values[v];
-        const suit = suits[s];
-        cards.push({ value, suit });
-      }
-    }
-    return cards;
-  }
+function pullNumber() {
+  let theNumber = Math.floor(Math.random() * card.numbers.length);
+  document.getElementById("randomNumber").innerHTML = card.numbers[theNumber];
+}
 
-  function randomCard(cards) {
-    const random = Math.floor(Math.random() * 51);
-    const cardValue = cards[random].value;
-    const cardSuit = cards[random].suit;
-    let entity;
-    cardSuit === "Diamonds"
-      ? (entity = "&diams;")
-      : (entity = "&" + cardSuit.toLowerCase() + ";");
-    const card = document.createElement("div");
-    card.classList.add("card", cardSuit.toLowerCase());
-    card.innerHTML =
-      '<span class="card-value-suit top">' +
-      cardValue +
-      entity +
-      "</span>" +
-      '<span class="card-suit">' +
-      entity +
-      "</span>" +
-      '<span class="card-value-suit bot">' +
-      cardValue +
-      entity +
-      "</span>";
-    document.body.appendChild(card);
+function pullBothSuits() {
+  var allSuits = Math.floor(Math.random() * card.suits.length);
+  document.getElementById("topSuit").innerHTML = card.suits[allSuits];
+  document.getElementById("bottomSuit").innerHTML = card.suits[allSuits];
+
+  if (card.suits[allSuits] === "&#9830" || card.suits[allSuits] === "&#9829") {
+    document.getElementById("theCard").classList.add("redSuit");
+  } else if (
+    card.suits[allSuits] === "&#9827" ||
+    card.suits[allSuits] === "&#9824"
+  ) {
+    document.getElementById("theCard").classList.remove("redSuit");
   }
-  const cards = deckBuilder();
-  randomCard(cards);
-  console.log("Hello Rigo from the console!");
+}
+
+window.wholeCard = function() {
+  pullNumber();
+  pullBothSuits();
 };
