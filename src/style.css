@@ -9,7 +9,7 @@ body {
 }
 
 .card {
-  height: 28em;
+  height: 29em;
   width: 20em;
   background-color: white;
   border-radius: 1em;
@@ -46,7 +46,7 @@ body {
 #topSuit {
   font-size: 125px;
   position: absolute;
-  top: 0.1px;
+  top: 1px;
   left: 10px;
 }
 
