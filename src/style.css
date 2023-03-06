@@ -1,5 +1,5 @@
 body {
-  background: #3f5a5a;
+  background: #126823;
 }
 
 .container {
@@ -15,6 +15,7 @@ body {
   border-radius: 1em;
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
   position: relative;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
 }
 
 .card p {
@@ -27,7 +28,7 @@ body {
   width: 15em;
   height: 3em;
   border-radius: 5px;
-  background-color: #948260;
+  background-color: #573800;
   color: white;
   border: none;
   box-shadow: 1px 1px #5f5e5e78;
@@ -43,17 +44,17 @@ body {
 }
 
 #topSuit {
-  font-size: 100px;
+  font-size: 125px;
   position: absolute;
-  top: 10px;
+  top: 0.1px;
   left: 10px;
 }
 
 #bottomSuit {
   transform: rotate(180deg);
-  font-size: 100px;
+  font-size: 125px;
   position: absolute;
-  bottom: 10px;
+  bottom: 2px;
   right: 10px;
 }
 

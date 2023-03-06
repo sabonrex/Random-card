@@ -5,8 +5,8 @@ import "./style.css";
 let suits, numbers, suitsBottom, i;
 let card = {
   suits: ["&#9830", "&#9829", "&#9824", "&#9827"],
-  suitsBottom: ["&#9830", "&#9829", "&#9824", "&#9827"],
-  numbers: ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+
+  numbers: ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
 };
 
 function pullNumber() {
